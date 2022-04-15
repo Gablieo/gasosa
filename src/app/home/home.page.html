@@ -1,0 +1,47 @@
+<div class="d-flex flex-column m-4">
+  <h1 class="text-center text-white">
+    CALCULO DE GASOSA
+  </h1>
+  <br>
+  <label for="cigarros" class="mb-3 mt-2 text-white">
+    Distância:
+  </label>
+  <input class="number" id="distancia1" [(ngModel)]="distancia">
+  <br>
+  <label for="anos" class="mb-3 mt-2 text-white">
+    Consumo:
+  </label>
+  <input class="number" id="consumo1" [(ngModel)]="consumo">
+  <br>
+  <label for="anos" class="mb-3 mt-2 text-white">
+    Valor da gasolina (ex: 6.50):
+  </label>
+  <input class="number" id="gasosa1" [(ngModel)]="gasosa">
+  <br>
+
+  <button (click)="calcularGasosa()" class="btn btn-warning m-5 text-white">
+    CALCULAR
+  </button>
+  <br>
+  <h4 class="text-center text-white">
+    Gasto em reais da viagem:
+  </h4>
+  <h2 class="text-center text-white">
+    {{gastoreais}} Reais
+  </h2>
+
+  <br>
+  <div class="d-flex flex-column m-4 text-white">
+    <h4 class="text-center"> Distância total percorrida: {{distancia}}</h4>
+    <h4 class="text-center"> Consumo de gasolina: {{consumo}}</h4>
+    <h4 class="text-center"> Valor da gasolina: R$: {{gasosa}}</h4>
+
+
+
+  </div>
+
+  <!-- <div class="w-{{barra}} h-10 bg-danger"></div> -->
+  <!--<div class="h-img d-flex justify-content-around">
+    <img src="../../assets/hearticon.png" *ngFor="let i of [].constructor(qtdCoracao)">
+  </div>-->
+</div>
